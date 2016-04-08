@@ -11,7 +11,7 @@ description:
   creates genome coverage bigWig file from .bam file
 
 requirements:
-  - $import: ../../tools/envvar-global.cwl
+  - $import: ../../tools/envvar-global.yml
 
 inputs:
   - id: input
@@ -60,7 +60,7 @@ steps:
     run: ../../tools/linux-sort.cwl
     inputs:
       - {id: input, source: "#genomecov/genomecoverage" }
-      - {id: key", default: ["1,1","2,2n"] }
+      - {id: key, default: ["1,1","2,2n"] }
     outputs:
       - {id: sorted}
 

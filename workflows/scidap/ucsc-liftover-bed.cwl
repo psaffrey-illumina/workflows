@@ -1,8 +1,9 @@
 #!/usr/bin/env cwl-runner
+cwlVersion: "cwl:draft-3"
 
 class: Workflow
 requirements:
-  - import: ../../tools/envvar-global.cwl
+  - import: ../../tools/envvar-global.yml
 
 inputs:
   - id: "#input"
